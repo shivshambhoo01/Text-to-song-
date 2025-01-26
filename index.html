@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text-to-Song AI Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    textarea {
+      width: 80%;
+      height: 100px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text-to-Song AI Tool</h1>
+  <p>Enter some text and click the button to generate a song.</p>
+
+  <textarea id="textInput" placeholder="Enter your text here"></textarea><br>
+  <button onclick="generateSong()">Generate Song</button>
+
+  <div id="songResult">
+    <!-- The song will be displayed or played here -->
+  </div>
+
+  <script>
+    function generateSong() {
+      const textInput = document.getElementById("textInput").value;
+      if (textInput) {
+        // For now, just show the text input as a song (this is a placeholder)
+        document.getElementById("songResult").innerText = "Generated Song: " + textInput;
+        // You would integrate your AI model here to generate the song
+      } else {
+        alert("Please enter some text!");
+      }
+    }
+  </script>
+</body>
+</html>
